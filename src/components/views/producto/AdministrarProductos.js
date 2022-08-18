@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ItemProducto from "./ItemProducto";
 import { Table, Button } from "react-bootstrap";
 
 const AdministrarProductos = () => {
+  const URL = process.env.REACT_APP_API_CAFETERIA;
+  console.log(URL);
+
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async () => {
+    try {
+      // Codigo que quiero ejecutar
+      // Peticion get
+      const respuesta = await fetch(URL);
+      // Con el metodo json saco los datos del body
+      const listaProductos = await respuesta.json();
+      setProductos(listaProductos);
+    } catch (error) {
+      // Codigo por si falla
+    }
+  };
+
   return (
     <section className="container">
       <div className="d-flex justify-content-between align-items-center mt-5">
@@ -22,7 +44,9 @@ const AdministrarProductos = () => {
           </tr>
         </thead>
         <tbody>
-          <ItemProducto></ItemProducto>
+          {productos.map((producto) => (
+            <ItemProducto key={producto.id} producto={producto}></ItemProducto>
+          ))}
         </tbody>
       </Table>
     </section>
