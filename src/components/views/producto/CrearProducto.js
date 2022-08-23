@@ -10,11 +10,12 @@ const CrearProducto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(nombreProducto);
+    console.log(precio);
     // Validar los datos
     if (cantidadCaracteres(nombreProducto)) {
     }
     if (validarNumeros(precio)) {
-      console.log("reingresar");
     }
     // Crear un objeto
     // Enviarle peticion CREATE a la API para dar de alta el objeto
