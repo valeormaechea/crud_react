@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import Alert from "react-bootstrap/Alert";
 import { cantidadCaracteres, validarNumeros } from "./helper";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CrearProducto = () => {
   const [nombreProducto, setNombreProducto] = useState("");
@@ -12,6 +13,8 @@ const CrearProducto = () => {
   const [msjError, setMsjError] = useState(false);
   // Variable de entorno con la dirección de mi API
   const URL = process.env.REACT_APP_API_CAFETERIA;
+  // Inicializar el hook useNavigate
+  const navegacion = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,6 +50,8 @@ const CrearProducto = () => {
             "success"
           );
         }
+        // Redireccionar a la pagina administrar
+        navegacion("/administrar");
       } catch (error) {
         console.log(error);
       }
