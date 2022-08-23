@@ -48,6 +48,13 @@
       "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
       "categoria": "salado",
       "id": 7
+    },
+    {
+      "nombreProducto": "Licuado",
+      "precio": "600",
+      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "categoria": "bebida-fria",
+      "id": 8
     }
   ]
 }
