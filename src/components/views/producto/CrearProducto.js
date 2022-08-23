@@ -1,24 +1,58 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert";
 import { cantidadCaracteres, validarNumeros } from "./helper";
+import Swal from "sweetalert2";
 
 const CrearProducto = () => {
   const [nombreProducto, setNombreProducto] = useState("");
   const [imagen, setImagen] = useState("");
   const [precio, setPrecio] = useState(0);
   const [categoria, setCategoria] = useState("");
+  const [msjError, setMsjError] = useState(false);
+  // Variable de entorno con la dirección de mi API
+  const URL = process.env.REACT_APP_API_CAFETERIA;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(nombreProducto);
     console.log(precio);
     // Validar los datos
-    if (cantidadCaracteres(nombreProducto)) {
+    if (cantidadCaracteres(nombreProducto) && validarNumeros(precio)) {
+      setMsjError(false);
+
+      // Crear un objeto
+      const nuevoProducto = {
+        nombreProducto,
+        precio,
+        imagen,
+        categoria,
+      };
+      console.log(nuevoProducto);
+
+      // Enviarle peticion CREATE a la API para dar de alta el objeto
+      try {
+        const respuesta = await fetch(URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(nuevoProducto),
+        });
+        console.log(respuesta);
+        if (respuesta.status === 201) {
+          Swal.fire(
+            "Producto creado",
+            `El producto ${nuevoProducto.nombreProducto} fue creado correctamente.`,
+            "success"
+          );
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      setMsjError(true);
     }
-    if (validarNumeros(precio)) {
-    }
-    // Crear un objeto
-    // Enviarle peticion CREATE a la API para dar de alta el objeto
   };
 
   return (
@@ -68,6 +102,9 @@ const CrearProducto = () => {
           Guardar
         </Button>
       </Form>
+      <Alert variant="danger" className="mt-3">
+        Debe corregir los datos.
+      </Alert>
     </section>
   );
 };

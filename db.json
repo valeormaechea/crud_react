@@ -1,25 +1,46 @@
 {
-    "productos":[
-        {
-            "nombreProducto":"café",
-            "precio":"350",
-            "imagen":"https://...",
-            "categoria":"bebida-caliente",
-            "id":"1"
-        },
-        {
-            "nombreProducto":"licuado",
-            "precio":"700",
-            "imagen":"https://...",
-            "categoria":"bebida-fria",
-            "id":"2"
-        },
-        {
-            "nombreProducto":"Medialuna",
-            "precio":"50",
-            "imagen":"https://...",
-            "categoria":"dulce",
-            "id":"3"
-        }
-    ]
+  "productos": [
+    {
+      "nombreProducto": "café",
+      "precio": "350",
+      "imagen": "https://...",
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "licuado",
+      "precio": "700",
+      "imagen": "https://...",
+      "categoria": "bebida-fria",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Medialuna",
+      "precio": "50",
+      "imagen": "https://...",
+      "categoria": "dulce",
+      "id": 3
+    },
+    {
+      "nombreProducto": "brownie",
+      "precio": "400",
+      "imagen": "https://...",
+      "categoria": "dulce",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Brownie",
+      "precio": "500",
+      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "categoria": "dulce",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Cafe",
+      "precio": "250",
+      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "categoria": "bebida-caliente",
+      "id": 6
+    }
+  ]
 }
