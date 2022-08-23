@@ -107,9 +107,11 @@ const CrearProducto = () => {
           Guardar
         </Button>
       </Form>
-      <Alert variant="danger" className="mt-3">
-        Debe corregir los datos.
-      </Alert>
+      {msjError ? (
+        <Alert variant="danger" className="mt-3">
+          Debe corregir los datos.
+        </Alert>
+      ) : null}
     </section>
   );
 };
