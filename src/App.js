@@ -8,12 +8,15 @@ import Error404 from "./components/views/Error404";
 import AdministrarProductos from "./components/views/producto/AdministrarProductos";
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <body>
       <BrowserRouter>
-        <Menu></Menu>
+        <header>
+          <Menu></Menu>
+        </header>
         <Routes>
           <Route exact path="/" element={<Home></Home>}></Route>
           <Route
@@ -33,9 +36,11 @@ const App = () => {
           ></Route>
           <Route exact path="*" element={<Error404></Error404>}></Route>
         </Routes>
-        <Footer></Footer>
+        <footer>
+          <Footer></Footer>
+        </footer>
       </BrowserRouter>
-    </div>
+    </body>
   );
 };
 
