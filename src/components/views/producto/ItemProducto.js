@@ -25,16 +25,19 @@ const ItemProducto = (props) => {
             URL + "/" + props.producto.id,
             parametros
           );
+          if (respuesta.status === 200) {
+            Swal.fire(
+              "Eliminado",
+              `El producto ${props.producto.nombreProducto} fue borrado`,
+              "success"
+            );
+
+            props.consultarAPI();
+          }
         } catch (error) {
           console.log(error);
           // Mostrar un mensaje de error al usuario
         }
-
-        Swal.fire(
-          "Eliminado",
-          `El producto ${props.producto.nombreProducto} fue borrado`,
-          "success"
-        );
       }
     });
   };
