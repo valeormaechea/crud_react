@@ -18,8 +18,7 @@ const CrearProducto = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(nombreProducto);
-    console.log(precio);
+
     // Validar los datos
     if (cantidadCaracteres(nombreProducto) && validarNumeros(precio)) {
       setMsjError(false);
@@ -31,7 +30,6 @@ const CrearProducto = () => {
         imagen,
         categoria,
       };
-      console.log(nuevoProducto);
 
       // Enviarle peticion CREATE a la API para dar de alta el objeto
       try {
@@ -42,7 +40,6 @@ const CrearProducto = () => {
           },
           body: JSON.stringify(nuevoProducto),
         });
-        console.log(respuesta);
         if (respuesta.status === 201) {
           Swal.fire(
             "Producto creado",
