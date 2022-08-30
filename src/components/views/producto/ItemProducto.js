@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/esm/Button";
+import {ButtonGroup} from 'react-bootstrap';
 import Swal from "sweetalert2";
 
 const ItemProducto = (props) => {
@@ -50,10 +51,14 @@ const ItemProducto = (props) => {
       <td>{props.producto.imagen}</td>
       <td>{props.producto.categoria}</td>
       <td>
-        <Button variant="warning">Editar</Button>
-        <Button variant="danger" onClick={handleDelete}>
-          Borrar
-        </Button>
+        <ButtonGroup>
+          <Button variant="warning">
+            Editar
+          </Button>
+          <Button variant="danger" onClick={handleDelete}>
+            Borrar
+          </Button>
+        </ButtonGroup>
       </td>
     </tr>
   );
