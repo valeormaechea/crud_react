@@ -23,7 +23,7 @@ const App = () => {
           ></Route>
           <Route
             exact
-            path="/administrar/producto/editar:id"
+            path="/administrar/producto/editar/:id"
             element={<EditarProducto></EditarProducto>}
           ></Route>
           <Route

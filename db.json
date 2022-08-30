@@ -1,16 +1,16 @@
 {
   "productos": [
     {
-      "nombreProducto": "Brownie",
-      "precio": "500",
+      "nombreProducto": "Brownie chocoo",
       "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "precio": "600",
       "categoria": "dulce",
       "id": 1
     },
     {
       "nombreProducto": "Cafe",
-      "precio": "200",
       "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "precio": "200",
       "categoria": "bebida-caliente",
       "id": 2
     }

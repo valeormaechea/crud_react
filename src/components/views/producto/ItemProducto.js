@@ -52,7 +52,7 @@ const ItemProducto = (props) => {
       <td>{props.producto.categoria}</td>
       <td>
         <Link
-          to={`/administrar/producto/editar:${props.producto.id}`}
+          to={`/administrar/producto/editar/${props.producto.id}`}
           className="btn btn-warning"
         >
           Editar
