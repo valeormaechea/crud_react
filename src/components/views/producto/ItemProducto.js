@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/esm/Button";
 import Swal from "sweetalert2";
+import {Link} from "react-router-dom";
 
 const ItemProducto = (props) => {
   const URL = process.env.REACT_APP_API_CAFETERIA;
@@ -50,7 +51,12 @@ const ItemProducto = (props) => {
       <td>{props.producto.imagen}</td>
       <td>{props.producto.categoria}</td>
       <td>
-        <Button variant="warning">Editar</Button>
+        <Link
+          to={`/administrar/producto/editar:${props.producto.id}`}
+          className="btn btn-warning"
+        >
+          Editar
+        </Link>
         <Button variant="danger" onClick={handleDelete}>
           Borrar
         </Button>
