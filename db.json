@@ -27,6 +27,13 @@
       "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
       "categoria": "dulce",
       "id": 6
+    },
+    {
+      "nombreProducto": "Cafe",
+      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "precio": "200",
+      "categoria": "bebida-caliente",
+      "id": 2
     }
   ]
 }
