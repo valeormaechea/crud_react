@@ -15,3 +15,12 @@ export const validarNumeros = (input) => {
     return false;
   }
 };
+
+export const cantidadCaracteresText = (input) => {
+  if (input.length >= 2 && input.length <= 50) {
+    console.log(input);
+    return true;
+  } else {
+    return false;
+  }
+};

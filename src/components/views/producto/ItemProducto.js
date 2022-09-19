@@ -50,8 +50,9 @@ const ItemProducto = (props) => {
       <td>{props.producto.nombreProducto}</td>
       <td>${props.producto.precio}</td>
       <td>{props.producto.imagen}</td>
+      <td>{props.producto.descripcion}</td>
       <td>{props.producto.categoria}</td>
-      <td>
+      <td className="text-center">
         <ButtonGroup>
           <Link
             to={`/administrar/producto/editar/${props.producto.id}`}

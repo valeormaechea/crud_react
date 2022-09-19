@@ -1,32 +1,52 @@
 {
   "productos": [
     {
-      "nombreProducto": "y ella",
-      "precio": "200",
-      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
-      "categoria": "bebida-fria",
-      "id": 4
+      "nombreProducto": "Café",
+      "precio": "300",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "categoria": "bebida-caliente",
+      "descripcion": "Café torrado",
+      "id": 1
     },
     {
-      "nombreProducto": "sdfsdf",
-      "precio": "20",
-      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
-      "categoria": "bebida-fria",
-      "id": 5
+      "nombreProducto": "Capuccino",
+      "precio": "450",
+      "imagen": "https://okdiario.com/img/2018/03/03/capucino-655x368.jpg",
+      "categoria": "bebida-caliente",
+      "descripcion": "Capuccino con canela",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Budín de banana y nuez",
+      "precio": "250",
+      "imagen": "https://scm-assets.constant.co/scm/unilever/2bb5223be0548fcc55c230aa5f951219/7bdd917b-6b2c-4bde-a77a-7644acb153a6.jpg",
+      "categoria": "dulce",
+      "descripcion": "Budín de banana y nueces fresco",
+      "id": 3
     },
     {
       "nombreProducto": "Brownie",
-      "precio": "600",
-      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
+      "precio": "300",
+      "imagen": "https://www.laurafuentes.soy/wp-content/uploads/2016/08/Brownies-RC-2.jpg",
       "categoria": "dulce",
-      "id": 6
+      "descripcion": "Brownie chocolatoso",
+      "id": 4
     },
     {
-      "nombreProducto": "Cafe",
-      "imagen": "https://www.recetasderechupete.com/receta-de-brownies-de-chocolate-con-nueces-forma-clasica-y-facil/1220/",
-      "precio": "200",
-      "categoria": "bebida-caliente",
-      "id": 2
+      "nombreProducto": "Tostado de jamón y queso",
+      "precio": "600",
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/radiomitre/MEKCEG4OVZCTPGTOTFONCRRFHY.jpg",
+      "categoria": "salado",
+      "descripcion": "Tostado en pan de miga",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Muffin con chispas de choco",
+      "precio": "300",
+      "imagen": "https://images.aws.nestle.recipes/original/55f33d5f7e48b632c0325b8056af34dd_muffin_gotas_chocolate_leite_nestle.jpg",
+      "categoria": "dulce",
+      "descripcion": "Muffin de vainilla con chispas de chocolate",
+      "id": 6
     }
   ]
 }

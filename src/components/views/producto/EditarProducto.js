@@ -1,7 +1,7 @@
 import { React, useEffect, useState, useRef } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
-import { cantidadCaracteres, validarNumeros } from "./helper";
+import { cantidadCaracteres, validarNumeros, cantidadCaracteresText } from "./helper";
 import Swal from "sweetalert2";
 
 const EditarProducto = () => {
@@ -14,6 +14,7 @@ const EditarProducto = () => {
   const nombreProductoRef = useRef("");
   const precioRef = useRef(0);
   const imagenRef = useRef("");
+  const descripcionRef = useRef("");
 
   useEffect(() => {
     consultarAPI();
@@ -35,7 +36,8 @@ const EditarProducto = () => {
     // Validar que todos los campos son correctos
     if (
       cantidadCaracteres(nombreProductoRef.current.value) &&
-      validarNumeros(precioRef.current.value)
+      validarNumeros(precioRef.current.value) &&
+      cantidadCaracteresText(descripcionRef.current.value)
     ) {
       // Crear un objeto con los datos modificados
       const productoEditar = {
@@ -43,6 +45,7 @@ const EditarProducto = () => {
         imagen: imagenRef.current.value,
         precio: precioRef.current.value,
         categoria: producto.categoria,
+        descripcion: descripcionRef.current.value,
       };
       console.log(productoEditar);
       // Pedir a la API la actualización
@@ -125,6 +128,15 @@ const EditarProducto = () => {
             <option value="dulce">Dulce</option>
             <option value="salado">Salado</option>
           </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="descripcionProducto">
+          <Form.Label>Descripción</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            defaultValue={producto.descripcion}
+            ref={descripcionRef}
+          />
         </Form.Group>
 
         <Button variant="primary" type="submit">

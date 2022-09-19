@@ -42,6 +42,7 @@ const AdministrarProductos = () => {
             <th>Producto</th>
             <th>Precio</th>
             <th>URL de imagen</th>
+            <th>Descripción</th>
             <th>Categoria</th>
             <th>Opciones</th>
           </tr>

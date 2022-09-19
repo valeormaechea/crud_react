@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import Alert from "react-bootstrap/Alert";
-import { cantidadCaracteres, validarNumeros } from "./helper";
+import { cantidadCaracteres, validarNumeros, cantidadCaracteresText } from "./helper";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,7 @@ const CrearProducto = () => {
   const [imagen, setImagen] = useState("");
   const [precio, setPrecio] = useState(0);
   const [categoria, setCategoria] = useState("");
+  const [descripcion, setDescripcion] = useState("");
   const [msjError, setMsjError] = useState(false);
   // Variable de entorno con la dirección de mi API
   const URL = process.env.REACT_APP_API_CAFETERIA;
@@ -20,7 +21,11 @@ const CrearProducto = () => {
     e.preventDefault();
 
     // Validar los datos
-    if (cantidadCaracteres(nombreProducto) && validarNumeros(precio)) {
+    if (
+      cantidadCaracteres(nombreProducto) &&
+      validarNumeros(precio) &&
+      cantidadCaracteresText(descripcion)
+    ) {
       setMsjError(false);
 
       // Crear un objeto
@@ -29,6 +34,7 @@ const CrearProducto = () => {
         precio,
         imagen,
         categoria,
+        descripcion,
       };
 
       // Enviarle peticion CREATE a la API para dar de alta el objeto
@@ -98,6 +104,14 @@ const CrearProducto = () => {
             <option value="dulce">Dulce</option>
             <option value="salado">Salado</option>
           </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="descripcionProducto">
+          <Form.Label>Descripción</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            onChange={(e) => setDescripcion(e.target.value)}
+          />
         </Form.Group>
 
         <Button variant="primary" type="submit">
