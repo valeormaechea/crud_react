@@ -9,6 +9,7 @@ import AdministrarProductos from "./components/views/producto/AdministrarProduct
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import "./App.css";
+import DetalleProducto from "./components/views/producto/DetalleProducto";
 
 const App = () => {
   return (
@@ -33,6 +34,11 @@ const App = () => {
             exact
             path="/administrar/producto/crear"
             element={<CrearProducto></CrearProducto>}
+          ></Route>
+          <Route
+            exact
+            path="/detalleProducto/:id"
+            element={<DetalleProducto></DetalleProducto>}
           ></Route>
           <Route exact path="*" element={<Error404></Error404>}></Route>
         </Routes>

@@ -1,0 +1,20 @@
+.imagen {
+  object-fit: cover;
+  max-height: 450px;
+  width: 100%;
+}
+
+.colImagen {
+  height: 100%;
+}
+
+.divDetalle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.containerDetalle {
+  max-height: 450px;
+  border-radius: 20px;
+}
