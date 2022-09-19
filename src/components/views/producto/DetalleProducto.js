@@ -23,7 +23,7 @@ const DetalleProducto = () => {
     }
   };
   return (
-    <Container className="bg-light mt-5 containerDetalle">
+    <Container className="bg-light mt-5 mb-5 containerDetalle">
       <Row>
         <Col md={6} className='p-0 h-100'>
           <img src={producto.imagen} alt="" className="imagen" />
