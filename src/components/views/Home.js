@@ -29,16 +29,17 @@ const Home = () => {
         <h1>Bienvenidos</h1>
         <hr />
       </section>
-
-      <Row xs={1} md={4} className="g-4">
-        {productos.map((producto) => (
-          <CardProducto
-            key={producto.id}
-            producto={producto}
-            consultarAPI={consultarAPI}
-          ></CardProducto>
-        ))}
-      </Row>
+      <section className="mb-4">
+        <Row xs={1} md={4} className="g-4">
+          {productos.map((producto) => (
+            <CardProducto
+              key={producto.id}
+              producto={producto}
+              consultarAPI={consultarAPI}
+            ></CardProducto>
+          ))}
+        </Row>
+      </section>
     </main>
   );
 };
