@@ -24,7 +24,7 @@ const ItemProducto = (props) => {
             method: "DELETE",
           };
           const respuesta = await fetch(
-            URL + props.producto._id,
+            URL + "/" + props.producto._id,
             parametros
           );
           if (respuesta.status === 200) {
