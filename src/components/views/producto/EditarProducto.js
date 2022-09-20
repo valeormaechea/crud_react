@@ -50,7 +50,7 @@ const EditarProducto = () => {
       console.log(productoEditar);
       // Pedir a la API la actualización
       try {
-        const respuesta = await fetch(`${URL}/${id}`, {
+        const respuesta = await fetch(`${URL}${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
