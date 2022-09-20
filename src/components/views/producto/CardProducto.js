@@ -18,7 +18,7 @@ const CardProducto = (props) => {
             </Col>
             <Col>
               <Link
-                to={`/detalleProducto/${props.producto.id}`}
+                to={`/detalleProducto/${props.producto._id}`}
                 className="btn btn-danger"
               >
                 Ver más

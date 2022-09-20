@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, Container, Badge } from "react-bootstrap";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./DetalleProducto.css";
 
 const DetalleProducto = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState({});
   const URL = process.env.REACT_APP_API_CAFETERIA;
-
+    console.log(id);
   useEffect(() => {
     consultarAPI();
   }, []);
 
   const consultarAPI = async () => {
     try {
-      const respuesta = await fetch(URL + "/" + id);
+      const respuesta = await fetch(URL + id);
       const dato = await respuesta.json();
       setProducto(dato);
     } catch (error) {

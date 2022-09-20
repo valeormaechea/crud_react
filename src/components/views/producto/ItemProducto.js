@@ -24,7 +24,7 @@ const ItemProducto = (props) => {
             method: "DELETE",
           };
           const respuesta = await fetch(
-            URL + "/" + props.producto.id,
+            URL + props.producto._id,
             parametros
           );
           if (respuesta.status === 200) {
@@ -46,7 +46,7 @@ const ItemProducto = (props) => {
 
   return (
     <tr>
-      <td>{props.producto.id}</td>
+      <td>{props.producto._id}</td>
       <td>{props.producto.nombreProducto}</td>
       <td>${props.producto.precio}</td>
       <td>{props.producto.imagen}</td>
@@ -55,7 +55,7 @@ const ItemProducto = (props) => {
       <td className="text-center">
         <ButtonGroup>
           <Link
-            to={`/administrar/producto/editar/${props.producto.id}`}
+            to={`/administrar/producto/editar/${props.producto._id}`}
             className="btn btn-warning"
           >
             Editar

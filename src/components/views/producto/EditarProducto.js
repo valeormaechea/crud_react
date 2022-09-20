@@ -22,7 +22,7 @@ const EditarProducto = () => {
 
   const consultarAPI = async () => {
     try {
-      const respuesta = await fetch(URL + "/" + id);
+      const respuesta = await fetch(URL + id);
       const dato = await respuesta.json();
       setProducto(dato);
     } catch (error) {
